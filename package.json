@@ -1,0 +1,9 @@
+{
+	"name": "bem-deps-graph",
+	"main": "./index.js",
+	"version": "0.1.0",
+	"dependencies": {
+		"bem-naming": "^1.0.0",
+        "ncp": "^2.0.0"
+	}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link type="text/css" rel="stylesheet" href="vis.min.css">
+	<style>
+		#container {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+	<script type="application/javascript" src="data.js"></script>
+	<script type="application/javascript" src="vis.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="application/javascript">
+
+		var opts = {
+			manipulation: false,
+			height: '90%',
+			layout: {
+				hierarchical: {
+					enabled: true,
+					levelSeparation: 300
+				}
+			},
+			physics: {
+				hierarchicalRepulsion: {
+					nodeDistance: 300
+				}
+			}
+		};
+
+		var container = document.querySelector('#container');
+		var gph = new vis.Network(container, visData, opts);
+
+	</script>
+</body>
+</html>
